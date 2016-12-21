@@ -32,10 +32,12 @@ yum -y install docker-engine
 echo "Installing docker-compose"
 #Installing docker-compose
 curl -L "https://github.com/docker/compose/releases/download/1.8.1/docker-compose-$(uname -s)-$(uname -m)" > /usr/bin/docker-compose
+chmod +x /usr/bin/docker-compose
 
 echo "Installing docker-machine"
 #Installing docker-machine
 curl -L https://github.com/docker/machine/releases/download/v0.8.2/docker-machine-`uname -s`-`uname -m` > /usr/bin/docker-machine
+chmod +x /usr/bin/docker-machine
 
 echo "creating local_repo"
 yum install createrepo -y
